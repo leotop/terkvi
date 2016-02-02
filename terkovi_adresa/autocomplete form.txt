@@ -1,0 +1,43 @@
+https://gist.github.com/imranismail/10200241
+
+//SearchController.php
+public function autocomplete(){
+	$term = Input::get('term');
+	
+	$results = array();
+	
+	$queries = DB::table('users')
+		->where('first_name', 'LIKE', '%'.$term.'%')
+		->orWhere('last_name', 'LIKE', '%'.$term.'%')
+		->take(5)->get();
+	
+	foreach ($queries as $query)
+	{
+	    $results[] = [ 'id' => $query->id, 'value' => $query->first_name.' '.$query->last_name ];
+	}
+return Response::json($results);
+}
+
+
+//View
+{{ Form::open(['action' => ['SearchController@searchUser'], 'method' => 'GET']) }}
+    {{ Form::text('q', '', ['id' =>  'q', 'placeholder' =>  'Enter name'])}}
+    {{ Form::submit('Search', array('class' => 'button expand')) }}
+{{ Form::close() }}
+
+
+//Route
+Route::get('search/autocomplete', 'SearchController@autocomplete');
+
+
+//Javascript
+$(function()
+{
+	 $( "#q" ).autocomplete({
+	  source: "search/autocomplete",
+	  minLength: 3,
+	  select: function(event, ui) {
+	  	$('#q').val(ui.item.value);
+	  }
+	});
+});

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/migrations/2015_11_24_222653_create_churches_table.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/create.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/home.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/record.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/result-full.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/result-mail-adress.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/result-summary.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/result.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/search.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tests/ExampleTest.php" charset="UTF-8" />
+  </component>
+</project>
